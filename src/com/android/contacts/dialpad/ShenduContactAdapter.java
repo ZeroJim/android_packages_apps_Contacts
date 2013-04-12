@@ -128,7 +128,7 @@ public class ShenduContactAdapter extends BaseAdapter implements Filterable {
 				return false;
 			}
 			final String number = v.getTag(R.id.shendu_tag_second).toString();
-			final String name = v.getTag(R.id.shendu_tag_name).toString();
+			final String name = (v.getTag(R.id.shendu_tag_name) != null ? v.getTag(R.id.shendu_tag_name).toString() : number);
 		
 			Builder sd=new AlertDialog .Builder(mContext).setTitle(name).
 			setItems(R.array.shendu_onlongmenu_list, 
